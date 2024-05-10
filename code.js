@@ -35,9 +35,9 @@ let getUserChoice = () =>{
 let computerScore=0;
 let userScore=0;
 // make conditions for the winner
- let playRound = () =>{
-    let computer=getComputerChoice();
-    let user=getUserChoice();
+
+ let playRound = (user,computer) =>{
+
     console.log(`YOu chose ${user}`);
     console.log(`The computer chose ${computer}`);
     switch(user){
@@ -96,13 +96,17 @@ let userScore=0;
 let keepGoing=true;
 while(keepGoing){
     console.clear();
-    playRound();
+    let computer=getComputerChoice();
+let user=getUserChoice();
+    playRound(user,computer);
     let answer=prompt("Play Again -  Yes/No?").toLowerCase();
     while(answer!=="yes" && answer!=="no"){
         answer=prompt("Play Again -  Yes/No?").toLowerCase();
     }
     if(answer==="no"){
         keepGoing=false;
+        console.clear();
+        console.log("See You Next Time!");
     }
     
 }
