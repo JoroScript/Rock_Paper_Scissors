@@ -37,7 +37,9 @@ let userScore=0;
 // make conditions for the winner
 
  let playRound = (user,computer) =>{
-
+    console.clear();
+    roundsPlayed++;
+    console.log(`Round ${roundsPlayed}`);
     console.log(`YOu chose ${user}`);
     console.log(`The computer chose ${computer}`);
     switch(user){
@@ -93,22 +95,49 @@ let userScore=0;
     }
     console.log(`Score is now Human: ${userScore}/ Computer: ${computerScore}`);
  }
-let keepGoing=true;
-while(keepGoing){
-    console.clear();
-    let computer=getComputerChoice();
-let user=getUserChoice();
-    playRound(user,computer);
-    let answer=prompt("Play Again -  Yes/No?").toLowerCase();
-    while(answer!=="yes" && answer!=="no"){
-        answer=prompt("Play Again -  Yes/No?").toLowerCase();
+let roundsPlayed=0;
+let playGame= () => {
+    while(true){
+        if(roundsPlayed===5){
+            let answer = prompt("Play Again? -Yes/No: ").toLowerCase();
+            while(answer!=="yes" && answer!=="no"){
+                answer = prompt("Play Again? -Yes/No: ").toLowerCase();
+            }
+            if(answer==="no"){
+                console.clear();
+                console.log("See You Next Time!");
+                break;
+            }
+            else{
+                console.clear();
+                console.log("You Have Started A New Game!")
+                userScore=0;
+                computerScore=0;
+                roundsPlayed=0;
+            } 
+        }
+        let computer=getComputerChoice();
+        let user=getUserChoice();
+            playRound(user,computer);
     }
-    if(answer==="no"){
-        keepGoing=false;
-        console.clear();
-        console.log("See You Next Time!");
-    }
-    
+
 }
+playGame();
+// while(keepGoing){
+//     console.clear();
+//     let computer=getComputerChoice();
+// let user=getUserChoice();
+//     playRound(user,computer);
+//     let answer=prompt("Play Again -  Yes/No?").toLowerCase();
+//     while(answer!=="yes" && answer!=="no"){
+//         answer=prompt("Play Again -  Yes/No?").toLowerCase();
+//     }
+//     if(answer==="no"){
+//         keepGoing=false;
+//         console.clear();
+//         console.log("See You Next Time!");
+//     }
+    
+// }
 
 })
