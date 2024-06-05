@@ -1,0 +1,86 @@
+h1,h2{
+    margin: 1em auto;
+    text-align: center;
+
+}
+h3.hidden{
+    margin:0%;
+    display: none;
+}
+h3.vs{
+    font-size: 50px;
+    margin-inline: 0.3em;
+}
+h3#info{
+    margin: 1em auto;
+    text-align: center;
+    font-size: 45px;
+}
+img.choose{
+    transition: transform 0.6s ease;
+}
+img.choose:hover{
+    transform: translateY(-50px);
+ 
+}
+body{
+    background: rgb(238,174,202);
+background: linear-gradient(90deg, rgba(238,174,202,1) 0%, rgba(148,187,233,1) 100%);
+}
+img{
+    width: 100%;
+    height: auto;
+}
+.lost{
+    color: red;
+    font-weight: bold;
+}
+.tied{
+    color: gray;
+    font-weight: bold;
+    text-decoration: underline;
+}
+.won{
+    color: green;
+    font-weight: bold;
+}
+#container{
+    gap: 1em;
+    display: flex;
+    margin-top: 3em;
+    width: 100%;
+    height: auto;
+    justify-content: center;       
+}
+.frame{
+    width: 100px;
+    height: auto;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#pcChoice{
+    font-size: 45px;
+    text-align: center;
+}
+#endText{
+    margin-top: 3em;
+    display: flex;
+    justify-content:center;
+}
+#pc-cont{
+    display: flex;
+    justify-content: center;
+    gap: 1em;
+}
+
+img#winner, img#loser{
+    margin: 0 auto;
+    
+}
+#score{
+    margin: 0 auto;
+    text-align: center;
+    font-size: 45px;
+}

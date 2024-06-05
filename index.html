@@ -4,8 +4,30 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-   <script src="code.js"></script>
+    <h1>Welcome To Rock Paper Scissors!</h1>
+    <h2>Choose Your Tool:</h2>
+   <div id="container">
+    <div class="frame "><img id="rock" class="choose" src="/image-from-rawpixel-id-6792129-jpeg__1_-removebg-preview.png" alt=""></div>
+    <div class="frame choose"><img class="choose" id="paper"src="/image-from-rawpixel-id-6482382-png.png" alt=""></div>
+    <div class="frame choose"><img class="choose" id="scissors"src="/image-from-rawpixel-id-6488381-png.png" alt=""></div>
+   </div>
+   <hr>
+   <div id="pc-cont">
+    <p id="pcChoice"></p>
+    <div class="frame"><img src="" id="pcImage" alt=""></div>
+   </div>
+   <hr>
+
+   <div id="endText">
+    <div class="frame" ><img id="winner" src="" alt=""></div>
+    <h3 class="hidden vs">VS</h3>
+    <div class="frame" ><img id="loser"src="" alt=""></div>
+   </div>
+   <h3 class=""id="info"></h3>
+   <p id="score"></p>
+   <script src="code.js" defer></script>
 </body>
 </html>
